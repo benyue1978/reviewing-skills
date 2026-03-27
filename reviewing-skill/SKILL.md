@@ -72,6 +72,7 @@ Every finding must include:
 - line number or the closest precise location available
 
 Prefer embedding the location directly into the sentence, for example by naming the file, line number, and a short quoted phrase from the reviewed text. Do not hide all location detail at the end of the bullet.
+Never quote or reproduce secrets, credentials, tokens, API keys, passwords, private keys, or other sensitive values from the reviewed material. If a finding depends on sensitive content, describe it generically and redact the value, for example ``token [REDACTED]`` or `credential-like string`.
 
 If the target lacks file structure, cite the best available location description and say that exact line references are unavailable.
 
@@ -103,3 +104,4 @@ Ask these questions during review:
 Your final output must match `assets/review-template.md`.
 Do not replace the requested sections with a different structure.
 Write findings in natural prose. Explain impact directly instead of using the literal label `Why it matters:`.
+When citing reviewed content, prefer short non-sensitive phrases. Redact any sensitive material instead of quoting it.

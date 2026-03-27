@@ -9,6 +9,7 @@ For each finding, include:
 - A natural explanation of the issue and its impact
 - The file and line reference embedded in the sentence
 - Prefer including a short quoted phrase from the reviewed text when useful
+- Never quote secrets, credentials, tokens, API keys, passwords, private keys, or other sensitive values; describe them generically or redact them
 
 Use one finding per bullet.
 Do not use the literal label `Why it matters:`.
