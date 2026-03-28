@@ -18,7 +18,7 @@ It also checks all five common skill design patterns on every review:
 If your agent supports the Agent Skills ecosystem, install the skill with `npx skills add`:
 
 ```bash
-npx skills add benyue1978/reviewing-skill
+npx skills add benyue1978/reviewing-skills
 ```
 
 ## When To Use It
