@@ -47,13 +47,23 @@ Imagine a competent AI activates the skill with no extra human coaching. Check w
 - a partial skill package
 - a skill-like instruction document
 3. If the target follows the official skill structure, read `SKILL.md` first. If it does not, use the document the user identified as the review target.
-4. Read only the additional references, assets, or scripts needed to evaluate the skill.
-5. Review the target using both required methodologies.
-6. Evaluate all five design patterns, even if the target currently uses none of them.
-7. Recommend any pattern that should be added, removed, or made more explicit.
-8. Write findings with severity and file/line references.
-9. Render the final report using the template exactly.
-10. End by asking whether the user wants to implement the concrete changes you recommended.
+4. If the target is a packaged Agent Skill or partial skill package, perform the packaging sanity check before deeper review. This is mandatory.
+5. In that packaging sanity check, explicitly verify:
+- whether `SKILL.md` exists where the package claims it does
+- whether frontmatter is present
+- whether frontmatter includes both `name` and `description`
+- whether the frontmatter values follow the format expectations the package claims to follow
+- whether `references/`, `assets/`, and `scripts/` are used only when they add value
+- whether `SKILL.md` points to any required reference or template files
+- whether the package layout matches the intended portability claim
+6. Treat packaging failures, including missing or malformed frontmatter, as first-class findings rather than optional notes.
+7. Read only the additional references, assets, or scripts needed to evaluate the skill.
+8. Review the target using both required methodologies.
+9. Evaluate all five design patterns, even if the target currently uses none of them.
+10. Recommend any pattern that should be added, removed, or made more explicit.
+11. Write findings with severity and file/line references.
+12. Render the final report using the template exactly.
+13. End by asking whether the user wants to implement the concrete changes you recommended.
 
 ## Severity Rules
 
